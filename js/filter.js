@@ -27,3 +27,8 @@ if (!found) {
   console.warn('neradau 100');
 }
 console.log('found ===', found);
+
+// grazinti naujame masyve reiksmes mazesnes uz -1
+
+const lesThenM1 = numsArr.filter((sk) => sk < -1);
+console.log('lesThenM1 ===', lesThenM1);
