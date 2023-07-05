@@ -13,8 +13,39 @@ const numsArr = [4, 23, 7, 39, 19, 0, 9, 14];
 console.log('numsArr ===', numsArr);
 
 let double = numsArr.map((el, idx) => {
-  return el * 2;
+  let skDouble = el * 2;
+  return skDouble;
 });
 
 console.log('numsArr ===', numsArr);
 console.log('double ===', double);
+
+// gauti nauja masyva kuriame viso numArr reiksmes yra neigiamos
+
+const negatives = numsArr.map((sk) => {
+  return sk * -1;
+});
+console.log('negatives ===', negatives);
+// grazinti objektu masyva su viena property "value" kurios reiksme yra sk
+// [{value: 4}, {value: 23}...]
+
+// grazinti string tipo duomenis su 'px' textu po reikme
+let pxArr = numsArr.map((sk) => {
+  if (sk === 0) {
+    return sk.toString();
+  }
+  const stringFromSk = `${sk}px`;
+  return stringFromSk;
+});
+console.log('pxArr ===', pxArr);
+
+const liElArr = numsArr.map((sk) => {
+  const liEl = document.createElement('li');
+  liEl.textContent = sk;
+  return liEl;
+});
+console.log('liElArr ===', liElArr);
+
+liElArr.map((htmlEl) => {
+  document.body.append(htmlEl);
+});
