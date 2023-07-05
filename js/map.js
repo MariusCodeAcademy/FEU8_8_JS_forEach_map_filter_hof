@@ -49,3 +49,21 @@ console.log('liElArr ===', liElArr);
 liElArr.map((htmlEl) => {
   document.body.append(htmlEl);
 });
+
+// grazinti objektu masyva su viena property "value" kurios reiksme yra sk
+// [{value: 4}, {value: 23}...]
+
+const arrayOfObjects = numsArr.map((sk) => {
+  let newObj = { value: sk };
+  return newObj;
+});
+console.log('arrayOfObjects ===', arrayOfObjects);
+
+// rasti objekta kurio value === 19
+let found = arrayOfObjects.find((oneArrayMemberObj) => {
+  console.log('oneArrayMemberObj ===', oneArrayMemberObj);
+  if (oneArrayMemberObj.value === 19) {
+    return true;
+  }
+});
+console.log('found ===', found);
